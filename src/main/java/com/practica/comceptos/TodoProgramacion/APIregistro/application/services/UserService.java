@@ -1,10 +1,13 @@
 package com.practica.comceptos.TodoProgramacion.APIregistro.application.services;
 
+import org.springframework.stereotype.Service;
+
 import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.Customer;
 import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.Homeowner;
 import com.practica.comceptos.TodoProgramacion.APIregistro.domain.ports.in.CreateUserCustomerUseCase;
 import com.practica.comceptos.TodoProgramacion.APIregistro.domain.ports.in.CreateUserHomeownerUseCase;
 
+@Service
 public class UserService implements CreateUserCustomerUseCase, CreateUserHomeownerUseCase {
     
     private final CreateUserCustomerUseCase createUserCustomerUseCase;
