@@ -1,6 +1,5 @@
 package com.practica.comceptos.TodoProgramacion.APIregistro.infrastructure.entities;
 
-import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.Homeowner;
 import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.User;
 
 import jakarta.persistence.Entity;
