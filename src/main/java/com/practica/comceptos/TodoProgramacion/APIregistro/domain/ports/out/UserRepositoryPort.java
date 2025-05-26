@@ -1,11 +1,9 @@
 package com.practica.comceptos.TodoProgramacion.APIregistro.domain.ports.out;
 
-import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.Customer;
-import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.Homeowner;
+import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.User;
 
 public interface UserRepositoryPort {
 
-    Customer createCustomer(Customer customer);
+    User createUser(User user);
 
-    Homeowner createHomeowner(Homeowner homeowner);
 }

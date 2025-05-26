@@ -1,10 +1,10 @@
 package com.practica.comceptos.TodoProgramacion.APIregistro.application.usecases;
 
-import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.Customer;
-import com.practica.comceptos.TodoProgramacion.APIregistro.domain.ports.in.CreateUserCustomerUseCase;
+import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.User;
+import com.practica.comceptos.TodoProgramacion.APIregistro.domain.ports.in.CreateUserUseCase;
 import com.practica.comceptos.TodoProgramacion.APIregistro.domain.ports.out.UserRepositoryPort;
 
-public class CreateUserCustomerUseCaseImlp implements CreateUserCustomerUseCase{
+public class CreateUserCustomerUseCaseImlp implements CreateUserUseCase{
     private final UserRepositoryPort userRepositoryPort;
 
     public CreateUserCustomerUseCaseImlp(UserRepositoryPort userRepositoryPort){
@@ -12,8 +12,8 @@ public class CreateUserCustomerUseCaseImlp implements CreateUserCustomerUseCase{
     }
 
     @Override
-    public Customer createCustomer(Customer customer) {
-        return userRepositoryPort.createCustomer(customer);
+    public User createUser(User user) {
+        return userRepositoryPort.createUser(user);
     }
 
 }

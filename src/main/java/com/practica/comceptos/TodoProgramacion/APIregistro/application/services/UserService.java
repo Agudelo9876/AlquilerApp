@@ -2,29 +2,20 @@ package com.practica.comceptos.TodoProgramacion.APIregistro.application.services
 
 import org.springframework.stereotype.Service;
 
-import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.Customer;
-import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.Homeowner;
-import com.practica.comceptos.TodoProgramacion.APIregistro.domain.ports.in.CreateUserCustomerUseCase;
-import com.practica.comceptos.TodoProgramacion.APIregistro.domain.ports.in.CreateUserHomeownerUseCase;
+import com.practica.comceptos.TodoProgramacion.APIregistro.domain.models.User;
+import com.practica.comceptos.TodoProgramacion.APIregistro.domain.ports.in.CreateUserUseCase;
 
 @Service
-public class UserService implements CreateUserCustomerUseCase, CreateUserHomeownerUseCase {
+public class UserService implements CreateUserUseCase{
     
-    private final CreateUserCustomerUseCase createUserCustomerUseCase;
-    private final CreateUserHomeownerUseCase createUserHomeownerUseCase;
+    private final CreateUserUseCase createUserUseCase;
     
-    public UserService(CreateUserCustomerUseCase createUserCustomerUseCase, CreateUserHomeownerUseCase createUserHomeownerUseCase){
-        this.createUserCustomerUseCase = createUserCustomerUseCase;
-        this.createUserHomeownerUseCase = createUserHomeownerUseCase;
+    public UserService(CreateUserUseCase createUserCustomerUseCase){
+        this.createUserUseCase = createUserCustomerUseCase;
     }
 
     @Override
-    public Customer createCustomer(Customer customer) {
-        return createUserCustomerUseCase.createCustomer(customer);
-    }
-    
-    @Override
-    public Homeowner createHomeowner(Homeowner homeowner) {
-        return createUserHomeownerUseCase.createHomeowner(homeowner);
+    public User createUser(User user) {
+        return createUserUseCase.createUser(user);
     }
 }
